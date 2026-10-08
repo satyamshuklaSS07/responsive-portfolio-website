@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Morgan | Web Developer</title>
+  <meta name="description" content="Portfolio of Alex Morgan, a front-end developer building responsive websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="logo" href="#home">Alex Morgan</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="blobs" aria-hidden="true"><b></b><b></b><b></b><canvas id="scene"></canvas></div>
+      <p class="hero-kicker">Hi, I'm Alex <span class="wave" aria-hidden="true">👋</span></p>
+      <h1>I build <span class="typed" data-words='["responsive websites","clean interfaces","fast web apps"]'></span><span class="cursor" aria-hidden="true"></span></h1>
+      <p class="hero-text">I turn designs into fast, accessible pages with HTML, CSS and JavaScript.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <div class="cube-scene" role="img" aria-label="Rotating 3D cube showing HTML, CSS, JS, Git, UI and A11y"><div class="cube"><span>HTML</span><span>CSS</span><span>JS</span><span>Git</span><span>UI</span><span>A11y</span></div></div>
+        <div>
+          <p>I'm a computer science student who enjoys making interfaces clear and easy to use. I started with a single HTML page and have been building ever since.</p>
+          <p>When I'm not coding, I sketch layouts, read about accessibility, and contribute to small open-source projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li><span>HTML5</span><div class="bar" aria-label="90 percent"><i style="--w:90%"></i></div></li>
+        <li><span>CSS3 &amp; Responsive Design</span><div class="bar" aria-label="85 percent"><i style="--w:85%"></i></div></li>
+        <li><span>JavaScript</span><div class="bar" aria-label="70 percent"><i style="--w:70%"></i></div></li>
+        <li><span>Git &amp; GitHub</span><div class="bar" aria-label="75 percent"><i style="--w:75%"></i></div></li>
+        <li><span>VS Code workflow</span><div class="bar" aria-label="80 percent"><i style="--w:80%"></i></div></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Weather Dashboard</h3>
+          <p>Search any city and see a 5-day forecast. Built with the Fetch API.</p>
+          <p class="tags">HTML · CSS · JavaScript</p>
+          <a href="https://github.com/your-username/weather-dashboard">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Task Tracker</h3>
+          <p>Add, finish and filter tasks. Data is saved in the browser.</p>
+          <p class="tags">HTML · CSS · JavaScript</p>
+          <a href="https://github.com/your-username/task-tracker">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Recipe Finder</h3>
+          <p>A responsive grid of recipes with live search by ingredient.</p>
+          <p class="tags">HTML · CSS Grid</p>
+          <a href="https://github.com/your-username/recipe-finder">View on GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Education &amp; experience</h2>
+      <ol class="timeline">
+        <li>
+          <time>2024 – present</time>
+          <h3>B.Sc. Computer Science</h3>
+          <p>Your University. Coursework in web development, algorithms and databases.</p>
+        </li>
+        <li>
+          <time>Summer 2025</time>
+          <h3>Web Development Intern</h3>
+          <p>Your Company. Built responsive landing pages and fixed accessibility issues.</p>
+        </li>
+        <li>
+          <time>2023</time>
+          <h3>Front-End Certificate</h3>
+          <p>Online course covering HTML, CSS and JavaScript fundamentals.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Have a project or an opportunity? Send me a message.</p>
+      <form id="contact-form" data-endpoint="https://formspree.io/f/YOUR_FORM_ID" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p class="error" id="message-error" role="alert"></p>
+        </div>
+        <button class="btn" type="submit">Send message</button>
+        <p id="form-status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Alex Morgan</p>
+    <p><a href="https://github.com/your-username">GitHub</a> · <a href="https://linkedin.com/in/your-username">LinkedIn</a></p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
